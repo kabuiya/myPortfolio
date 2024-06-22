@@ -1,0 +1,409 @@
+
+body {
+  
+    font-family: Sans-serif;
+    padding-top: 50px;
+    margin: 20px;
+}
+
+
+
+#about{
+    scroll-margin-top: 100px; 
+}
+
+
+/* home*/
+#home{
+    margin-bottom: 20px;
+    /* padding: 50px;
+     */
+}
+/*header*/
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: fixed; 
+    background-color: white;
+    top: 0; 
+    width: 100%; 
+    z-index: 999; 
+    margin-bottom: 100px;
+  
+   
+}
+
+
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav li {
+    display: flex;
+    float: right;
+    justify-content: flex-end; 
+    margin-right: 10px;
+  }
+
+#nav li a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    padding: 10px; }
+
+#name {
+    font-weight: bold;
+}
+
+  
+
+/* #nav li a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+} */
+
+#btn,  #nav li a, #name {
+    padding: 14px 16px;
+}
+
+
+#nav li a:hover {
+  color: #8133FF;  
+}
+  
+
+
+/*introduction */
+
+#myself, #introduction {
+background-color: #F8F8F8;
+display: grid;
+grid-template-columns: 1fr 1fr; 
+gap: 30px;
+
+}
+
+
+
+@media (max-width: 768px) {
+  #myself, #introduction {
+    grid-template-columns: 1fr;
+  }
+}
+
+#introduction {
+padding: 60px;
+
+}
+
+.myName {
+color: blue;
+}
+
+
+h2 {
+    background: linear-gradient(to right, purple, blue); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    display: inline-block; 
+  }
+  
+#intro {
+    align-content: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#intro a, #skills a, #portfolio a{
+    color:whitesmoke;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #8133FF ;
+    border-radius: 5px;
+}
+
+
+
+/* about */
+#about p,#intro p , #serv p, #mywork p, #contact p{
+    line-height: 1.8;
+}
+
+
+#myself{
+    padding-bottom: 100px;  
+    background-color:white;
+    
+
+}
+
+
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto auto; 
+    gap: 10px;
+    margin-bottom: 20px;
+ }
+
+.skills >div {
+    background-color: #F8F8F8;
+    padding: 10px;
+    text-align: center;
+
+}
+#about p{
+    color: black;
+}
+
+
+/* services*/
+
+
+ #Services {
+    
+    text-align: center;
+    background-color: #F8F8F8;
+    padding: 50px;
+    
+}
+
+
+#serv h4 {
+    background: linear-gradient(to right,blue, pink); 
+    -webkit-background-clip: text;  
+    color: transparent; 
+    display: inline-block; 
+  }
+  #serv a{
+    color: palevioletred;
+  } 
+
+#otherProjects{
+    padding: 70px;
+}
+
+
+#circle {
+    width: 10px;
+    height: 10px;
+    background-color: #8133FF;
+    border-radius: 50%; 
+    display: inline-block;
+    margin-right: 5px; 
+}
+
+#circle1 {
+    width: 10px;
+    height: 10px; 
+    background-color:#B8B8B8;
+    border-radius: 50%; 
+    display: inline-block;
+    margin-right: 5px; 
+
+}
+
+
+/*contact*/
+#contact {
+    background-color: #F8F8F8;
+    padding: 50px;
+    text-align: center;
+    
+}
+
+#cont{
+    align-items: center;
+}
+
+
+
+
+#form {
+    background-color: white;
+    padding: 50px;
+    max-width: 50%;
+    margin: auto;
+    
+}
+
+
+input[type="text"], textarea{
+ background-color: #F0F0F0;
+ border: none;
+ width: 80%;
+}
+
+input[type="submit"]{
+    background-color: #8133FF;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    float: right;
+    color: white;
+}
+
+textarea{
+  height: 100px;
+}
+
+input[type="text"] {
+  height: 30px;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #8133FF;
+    padding: 30px;
+    margin-top: 20px;
+    color: white;
+}
+
+
+#footer >div {
+    flex-basis: calc(33.33% - 20px);
+    padding: 30px;
+    text-align: left;
+    box-sizing: border-box;
+  
+}
+
+#icns{
+    display: flex;
+}
+
+#upwork{
+  background-color: #8133FF;
+}
+
+
+
+/* portifolio */
+
+#portfolio {
+    padding: 50px;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+  h2 {
+    text-align: center;
+  }
+
+  /* Portfolio section */
+  #mywork {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #mywork > div {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #F8F8F8;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #mywork img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  #mywork p {
+    margin-bottom: 10px;
+  }
+
+
+
+  /* More projects link */
+  #moreProjects {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #mywork > div {
+      flex-basis: 100%;
+    }
+  }
+
+
+  
+
+/* services */
+  #serv #fronted, #serv #backend {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap:20px;
+  }
+  
+  #serv #fronted > div, #serv #backend > div {
+    flex: 1 1 calc(33.33% - 20px);
+    background-color:white;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 10px;;
+    /* box-shadow: 0 0 5px 5px #888888; */
+  }
+  
+
+  
+  
+  #serv #fronted div:hover, #serv #backend div:hover {
+    background-color: #8133FF ;
+    color: white;
+    box-shadow: 0 0 5px 5px #7033FF ;
+  }
+  
+
+  
+  @media screen and (max-width: 768px) {
+    #serv #fronted > div, #serv #backend > div {
+      flex-basis: 100%;
+    }
+  }
+
+
+
+  #otherProj {
+    text-align: center;
+    padding: 20px;
+  }
+
+
+
+  .anchor-offset {
+    display: block;
+    height: 100px; /* Adjust this value based on the height of your navbar */
+     /* Adjust this value based on the height of your navbar */
+    visibility: hidden;
+  }
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
