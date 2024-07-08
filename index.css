@@ -388,12 +388,17 @@ input[type="text"] {
 
   .anchor-offset {
     display: block;
-    height: 100px; /* Adjust this value based on the height of your navbar */
-     /* Adjust this value based on the height of your navbar */
+    height: 100px; 
+    
     visibility: hidden;
   }
 
-
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
 
 
 
