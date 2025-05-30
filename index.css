@@ -1,414 +1,594 @@
+/* General Body and HTML styles */
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
 
 body {
-  
-    font-family: Sans-serif;
-    padding-top: 50px;
-    margin: 20px;
+  font-family: Sans-serif;
+  padding-top: 80px; /* Pushes content down to account for fixed header (desktop) */
+  margin: 0;
+  box-sizing: border-box;
 }
 
+/* Removed: .anchor-offset span is no longer needed in HTML */
+/* .anchor-offset {
+  display: none;
+} */
 
-
-#about{
-    scroll-margin-top: 100px; 
+.main-content-wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-
-/* home*/
-#home{
-    margin-bottom: 20px;
-    /* padding: 50px;
-     */
-}
-/*header*/
+/* Header and Navigation */
 #header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    position: fixed; 
-    background-color: white;
-    top: 0; 
-    width: 100%; 
-    z-index: 999; 
-    margin-bottom: 100px;
-  
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+#name {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 14px 16px;
+}
 
 #nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 #nav li {
-    display: flex;
-    float: right;
-    justify-content: flex-end; 
-    margin-right: 10px;
-  }
-
-#nav li a {
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    padding: 10px; }
-
-#name {
-    font-weight: bold;
+  margin-left: 20px;
 }
 
-  
-
-/* #nav li a {
+#nav li a {
   font-weight: bold;
   color: black;
   text-decoration: none;
-} */
-
-#btn,  #nav li a, #name {
-    padding: 14px 16px;
+  padding: 10px 15px;
+  display: block;
 }
-
 
 #nav li a:hover {
-  color: #8133FF;  
-}
-  
-
-
-/*introduction */
-
-#myself, #introduction {
-background-color: #F8F8F8;
-display: grid;
-grid-template-columns: 1fr 1fr; 
-gap: 30px;
-
+  color: #8133FF;
 }
 
+/* Main Sections - Apply scroll-margin-top here for responsive gaps */
+#introduction,
+#about,
+#Services,
+#portfolio,
+#contact {
+  scroll-margin-top: 80px; /* Default gap for larger screens */
+}
 
-
-@media (max-width: 768px) {
-  #myself, #introduction {
-    grid-template-columns: 1fr;
-  }
+#home { /* This div is no longer needed as a wrapper in HTML for #introduction */
+  margin-bottom: 20px;
 }
 
 #introduction {
-padding: 60px;
-
+  background-color: #F8F8F8;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 60px;
+  align-items: center;
 }
 
 .myName {
-color: blue;
+  color: blue;
 }
 
-
+/* Gradient Text for H2 and H4 */
 h2 {
-    background: linear-gradient(to right, purple, blue); 
-    -webkit-background-clip: text; 
-    color: transparent; 
-    display: inline-block; 
-  }
-  
+  background: linear-gradient(to right, purple, blue);
+  -webkit-background-clip: text; /* WebKit compatibility */
+  background-clip: text; /* Standard property */
+  color: transparent;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
 #intro {
-    align-content: center;
-}
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    height: auto;
+  align-content: center;
 }
 
-#intro a, #skills a, #portfolio a{
-    color:whitesmoke;
-    text-decoration: none;
-    padding: 10px;
-    background-color: #8133FF ;
-    border-radius: 5px;
+#pic img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
-
-
-/* about */
-#about p,#intro p , #serv p, #mywork p, #contact p{
-    line-height: 1.8;
+#intro a,
+#skills a,
+#portfolio a {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #8133FF;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
 }
 
-
-#myself{
-    padding-bottom: 100px;  
-    background-color:white;
-    
-
+#about p,
+#intro p,
+#serv p,
+#mywork p,
+#contact p {
+  line-height: 1.8;
 }
 
+/* About Me section */
+#myself {
+  padding: 50px 0;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
 
+#myself #pic {
+  padding: 20px;
+}
+
+#aboutme {
+  padding: 20px;
+}
 
 .skills {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: auto auto; 
-    gap: 10px;
-    margin-bottom: 20px;
- }
-
-.skills >div {
-    background-color: #F8F8F8;
-    padding: 10px;
-    text-align: center;
-
-}
-#about p{
-    color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-
-/* services*/
-
-
- #Services {
-    
-    text-align: center;
-    background-color: #F8F8F8;
-    padding: 50px;
-    
+.skills > div {
+  background-color: #F8F8F8;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
 }
 
+/* Services Section */
+#Services {
+  text-align: center;
+  background-color: #F8F8F8;
+  padding: 50px 20px;
+}
 
 #serv h4 {
-    background: linear-gradient(to right,blue, pink); 
-    -webkit-background-clip: text;  
-    color: transparent; 
-    display: inline-block; 
-  }
-  #serv a{
-    color: palevioletred;
-  } 
-
-#otherProjects{
-    padding: 70px;
+  background: linear-gradient(to right, blue, pink);
+  -webkit-background-clip: text; /* WebKit compatibility */
+  background-clip: text; /* Standard property */
+  color: transparent;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-
-#circle {
-    width: 10px;
-    height: 10px;
-    background-color: #8133FF;
-    border-radius: 50%; 
-    display: inline-block;
-    margin-right: 5px; 
+#serv a {
+  color: palevioletred;
 }
 
-#circle1 {
-    width: 10px;
-    height: 10px; 
-    background-color:#B8B8B8;
-    border-radius: 50%; 
-    display: inline-block;
-    margin-right: 5px; 
-
+#serv #fronted,
+#serv #backend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
+#serv #fronted > div,
+#serv #backend > div {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: 350px;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
 
-/*contact*/
+#serv #fronted div:hover,
+#serv #backend div:hover {
+  background-color: #8133FF;
+  color: white;
+  box-shadow: 0 0 10px 5px rgba(112, 51, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Portfolio Section */
+#portfolio {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#mywork {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+#mywork > div {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: 350px;
+  margin-bottom: 20px;
+  background-color: #F8F8F8;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#mywork img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+#portfolio a {
+  margin-top: 15px;
+}
+
+#moreProjects {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Contact Section */
 #contact {
-    background-color: #F8F8F8;
-    padding: 50px;
-    text-align: center;
-    
+  background-color: #F8F8F8;
+  padding: 50px 20px;
+  text-align: center;
 }
-
-#cont{
-    align-items: center;
-}
-
-
-
 
 #form {
-    background-color: white;
-    padding: 50px;
-    max-width: 50%;
-    margin: auto;
-    
+  background-color: white;
+  padding: 40px;
+  max-width: 600px;
+  margin: 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-
-input[type="text"], textarea{
- background-color: #F0F0F0;
- border: none;
- width: 80%;
+input[type="text"],
+input[type="email"], /* Combined types for consistent styling */
+textarea {
+  background-color: #F0F0F0;
+  border: 1px solid #ddd;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-input[type="submit"]{
-    background-color: #8133FF;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    float: right;
-    color: white;
+textarea {
+  height: 120px;
+  resize: vertical;
 }
 
-textarea{
-  height: 100px;
+input[type="submit"] {
+  background-color: #8133FF;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  float: right;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-input[type="text"] {
+input[type="submit"]:hover {
+  background-color: #7033FF;
+}
+
+/* Footer Section */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #8133FF;
+  padding: 30px 20px;
+  margin-top: 20px;
+  color: white;
+  text-align: left;
+}
+
+#footer > div {
+  flex-basis: calc(33.33% - 40px);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+#icns {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+#icns img {
+  width: 30px;
   height: 30px;
 }
 
-#footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: #8133FF;
-    padding: 30px;
-    margin-top: 20px;
-    color: white;
+#footer h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: white;
 }
 
-
-#footer >div {
-    flex-basis: calc(33.33% - 20px);
-    padding: 30px;
-    text-align: left;
-    box-sizing: border-box;
-  
+#footer p {
+  color: #f0f0f0;
 }
 
-#icns{
-    display: flex;
+#footer a {
+  color: white;
+  text-decoration: underline;
 }
 
-#upwork{
+#contact h3 {
+  text-align: center;
+  padding-top: 20px;
+  color: #555;
+}
+
+#otherProj, #otherProjects {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#circle, #circle1 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#circle {
   background-color: #8133FF;
 }
 
+#circle1 {
+  background-color: #B8B8B8;
+}
 
+/* --- Media Queries --- */
 
-/* portifolio */
-
-#portfolio {
-    padding: 50px;
-    text-align: center;
-    background-color: #f0f0f0;
-  }
-  h2 {
-    text-align: center;
-  }
-
-  /* Portfolio section */
-  #mywork {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  #mywork > div {
-    flex-basis: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    background-color: #F8F8F8;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  #mywork img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-  }
-  #mywork p {
-    margin-bottom: 10px;
+@media (max-width: 1024px) {
+  #introduction, #myself {
+      grid-template-columns: 1fr;
+      padding: 40px 20px;
   }
 
-
-
-  /* More projects link */
-  #moreProjects {
-    text-align: center;
-    margin-top: 20px;
+  /* Adjust scroll-margin-top for sections on medium screens */
+  #introduction,
+  #about,
+  #Services,
+  #portfolio,
+  #contact {
+    scroll-margin-top: 60px; /* Example: Assuming header height is around 60px at this breakpoint */
   }
 
-  @media screen and (max-width: 768px) {
-    #mywork > div {
-      flex-basis: 100%;
-    }
+  #header {
+      flex-direction: column;
+      padding-top: 10px;
+      padding-bottom: 10px;
   }
 
-
-  
-
-/* services */
-  #serv #fronted, #serv #backend {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    gap:20px;
-  }
-  
-  #serv #fronted > div, #serv #backend > div {
-    flex: 1 1 calc(33.33% - 20px);
-    background-color:white;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    border-radius: 10px;;
-    /* box-shadow: 0 0 5px 5px #888888; */
-  }
-  
-
-  
-  
-  #serv #fronted div:hover, #serv #backend div:hover {
-    background-color: #8133FF ;
-    color: white;
-    box-shadow: 0 0 5px 5px #7033FF ;
-  }
-  
-
-  
-  @media screen and (max-width: 768px) {
-    #serv #fronted > div, #serv #backend > div {
-      flex-basis: 100%;
-    }
+  #nav ul {
+      margin-top: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
   }
 
-
-
-  #otherProj {
-    text-align: center;
-    padding: 20px;
+  #nav li {
+      margin: 5px 10px;
   }
 
-
-
-  .anchor-offset {
-    display: block;
-    height: 100px; 
-    
-    visibility: hidden;
+  #form {
+      max-width: 90%;
+      padding: 30px;
   }
 
-@media (max-width: 600px) {
-  .container {
-    width: 100%;
-    padding: 10px;
+  #footer > div {
+      flex-basis: calc(50% - 40px);
   }
 }
 
+@media (max-width: 768px) {
+  body {
+      padding-top: 60px; /* Adjust body padding for fixed header on smaller screens */
+  }
 
+  /* Adjust scroll-margin-top for sections on small screens */
+  #introduction,
+  #about,
+  #Services,
+  #portfolio,
+  #contact {
+    scroll-margin-top: 60px; /* Match the body's padding-top and header's height on mobile */
+  }
 
+  #header {
+      padding: 5px 0; /* Smaller header padding on mobile, contributing to a shorter height */
+  }
 
-  
-  
+  #name {
+      font-size: 1.3em;
+      padding: 10px 15px;
+  }
 
+  #nav li a {
+      padding: 8px 12px;
+  }
 
+  #introduction {
+      padding: 30px 15px;
+  }
 
+  #myself {
+      padding: 30px 15px;
+  }
 
+  #myself #pic {
+      padding: 10px;
+  }
 
+  .skills {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
 
-  
+  #Services {
+      padding: 40px 15px;
+  }
+
+  #serv #fronted > div,
+  #serv #backend > div {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+  }
+
+  #portfolio {
+      padding: 40px 15px;
+  }
+
+  #mywork > div {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+  }
+
+  #contact {
+      padding: 40px 15px;
+  }
+
+  #form {
+      padding: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+      width: 100%;
+  }
+
+  input[type="submit"] {
+      width: 100%;
+      float: none;
+      margin-top: 15px;
+  }
+
+  #footer {
+      flex-direction: column;
+      background-color: transparent;
+      padding: 20px 15px;
+  }
+
+  #footer > div {
+      flex-basis: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      text-align: center;
+  }
+
+  #footer > div:nth-child(1) {
+      background-color: #7033FF;
+      color: white;
+  }
+
+  #footer > div:nth-child(1) p {
+      color: #f0f0f0;
+  }
+
+  #footer > div:nth-child(2) {
+      background-color: #A060FF;
+      color: white;
+  }
+
+  #footer > div:nth-child(2) p {
+      color: #f0f0f0;
+  }
+
+  #footer > div:nth-child(3) {
+      background-color: #B080FF;
+      color: white;
+  }
+
+  #footer > div:nth-child(3) p {
+      color: #f0f0f0;
+  }
+
+  #footer > div:nth-child(3) a {
+      color: #000;
+      text-decoration: underline;
+  }
+
+  #icns {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+      font-size: 1.8em;
+  }
+
+  #name {
+      font-size: 1.2em;
+  }
+
+  #nav li a {
+      padding: 6px 10px;
+      font-size: 0.9em;
+  }
+
+  #intro h4 {
+      font-size: 1em;
+  }
+
+  #intro p {
+      font-size: 0.9em;
+  }
+
+  #intro a, #skills a, #portfolio a {
+      padding: 8px 15px;
+      font-size: 0.9em;
+  }
+
+  .skills > div {
+      padding: 8px;
+      font-size: 0.9em;
+  }
+
+  #contact h3 {
+      font-size: 1em;
+  }
+}
