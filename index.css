@@ -1,19 +1,15 @@
-/* General Body and HTML styles */
+
 html {
-  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  scroll-behavior: smooth; 
 }
 
 body {
   font-family: Sans-serif;
-  padding-top: 80px; /* Pushes content down to account for fixed header (desktop) */
+  padding-top: 80px; 
   margin: 0;
   box-sizing: border-box;
 }
 
-/* Removed: .anchor-offset span is no longer needed in HTML */
-/* .anchor-offset {
-  display: none;
-} */
 
 .main-content-wrapper {
   max-width: 1200px;
@@ -23,7 +19,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Header and Navigation */
 #header {
   display: flex;
   flex-wrap: wrap;
@@ -67,16 +62,16 @@ body {
   color: #8133FF;
 }
 
-/* Main Sections - Apply scroll-margin-top here for responsive gaps */
+
 #introduction,
 #about,
 #Services,
 #portfolio,
 #contact {
-  scroll-margin-top: 80px; /* Default gap for larger screens */
+  scroll-margin-top: 80px; 
 }
 
-#home { /* This div is no longer needed as a wrapper in HTML for #introduction */
+#home {
   margin-bottom: 20px;
 }
 
@@ -93,7 +88,6 @@ body {
   color: blue;
 }
 
-/* Gradient Text for H2 and H4 */
 h2 {
   background: linear-gradient(to right, purple, blue);
   -webkit-background-clip: text; /* WebKit compatibility */
@@ -167,7 +161,7 @@ h2 {
   border-radius: 5px;
 }
 
-/* Services Section */
+
 #Services {
   text-align: center;
   background-color: #F8F8F8;
@@ -215,7 +209,7 @@ h2 {
   transform: translateY(-5px);
 }
 
-/* Portfolio Section */
+
 #portfolio {
   padding: 50px 20px;
   text-align: center;
@@ -258,7 +252,6 @@ h2 {
   margin-top: 30px;
 }
 
-/* Contact Section */
 #contact {
   background-color: #F8F8F8;
   padding: 50px 20px;
@@ -275,7 +268,7 @@ h2 {
 }
 
 input[type="text"],
-input[type="email"], /* Combined types for consistent styling */
+input[type="email"], 
 textarea {
   background-color: #F0F0F0;
   border: 1px solid #ddd;
@@ -378,7 +371,7 @@ input[type="submit"]:hover {
   background-color: #B8B8B8;
 }
 
-/* --- Media Queries --- */
+
 
 @media (max-width: 1024px) {
   #introduction, #myself {
@@ -386,13 +379,13 @@ input[type="submit"]:hover {
       padding: 40px 20px;
   }
 
-  /* Adjust scroll-margin-top for sections on medium screens */
+
   #introduction,
   #about,
   #Services,
   #portfolio,
   #contact {
-    scroll-margin-top: 60px; /* Example: Assuming header height is around 60px at this breakpoint */
+    scroll-margin-top: 60px; 
   }
 
   #header {
@@ -423,20 +416,19 @@ input[type="submit"]:hover {
 
 @media (max-width: 768px) {
   body {
-      padding-top: 60px; /* Adjust body padding for fixed header on smaller screens */
+      padding-top: 60px; 
   }
 
-  /* Adjust scroll-margin-top for sections on small screens */
   #introduction,
   #about,
   #Services,
   #portfolio,
   #contact {
-    scroll-margin-top: 60px; /* Match the body's padding-top and header's height on mobile */
+    scroll-margin-top: 60px; 
   }
 
   #header {
-      padding: 5px 0; /* Smaller header padding on mobile, contributing to a shorter height */
+      padding: 5px 0; 
   }
 
   #name {
