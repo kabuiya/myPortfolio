@@ -59,7 +59,7 @@ body {
 }
 
 #nav li a:hover {
-  color: #8133FF;
+  color: grey;
 }
 
 
@@ -85,14 +85,14 @@ body {
 }
 
 .myName {
-  color: blue;
+  color: #000;
 }
 
 h2 {
-  background: linear-gradient(to right, purple, blue);
-  -webkit-background-clip: text; /* WebKit compatibility */
-  background-clip: text; /* Standard property */
-  color: transparent;
+ 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: #000;
   display: inline-block;
   margin-bottom: 15px;
 }
@@ -114,7 +114,7 @@ h2 {
   color: whitesmoke;
   text-decoration: none;
   padding: 10px 20px;
-  background-color: #8133FF;
+  background-color: #000F;
   border-radius: 5px;
   display: inline-block;
   margin-top: 20px;
@@ -156,9 +156,10 @@ h2 {
 
 .skills > div {
   background-color: #F8F8F8;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   border-radius: 5px;
+box-shadow: 0 2px 6px rgba(128, 128, 128, 0.2);
 }
 
 
@@ -169,16 +170,16 @@ h2 {
 }
 
 #serv h4 {
-  background: linear-gradient(to right, blue, pink);
+  /*background: linear-gradient(to right, blue, pink);*/
   -webkit-background-clip: text; /* WebKit compatibility */
   background-clip: text; /* Standard property */
-  color: transparent;
+  color: #000;
   display: inline-block;
   margin-bottom: 10px;
 }
 
 #serv a {
-  color: palevioletred;
+  color: #000;
 }
 
 #serv #fronted,
@@ -203,9 +204,9 @@ h2 {
 
 #serv #fronted div:hover,
 #serv #backend div:hover {
-  background-color: #8133FF;
-  color: white;
-  box-shadow: 0 0 10px 5px rgba(112, 51, 255, 0.4);
+  /*background-color: #000;*/
+ /* color: white;*/
+  box-shadow: 0 0 10px 5px gray;
   transform: translateY(-5px);
 }
 
@@ -241,6 +242,12 @@ h2 {
   display: block;
   margin-bottom: 15px;
   border-radius: 5px;
+}
+#mywork a {
+  background-color:transparent;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+   color: black;
+  
 }
 
 #portfolio a {
@@ -285,7 +292,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #8133FF;
+  background-color:#000;
   padding: 12px 25px;
   border: none;
   border-radius: 4px;
@@ -296,15 +303,16 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #7033FF;
+  background-color: #000;
 }
 
 /* Footer Section */
 #footer {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.09);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #8133FF;
+
   padding: 30px 20px;
   margin-top: 20px;
   color: white;
@@ -332,11 +340,11 @@ input[type="submit"]:hover {
 #footer h4 {
   margin-top: 0;
   margin-bottom: 15px;
-  color: white;
+  color: black;
 }
 
 #footer p {
-  color: #f0f0f0;
+  color: black;
 }
 
 #footer a {
@@ -364,7 +372,7 @@ input[type="submit"]:hover {
 }
 
 #circle {
-  background-color: #8133FF;
+  background-color: #000;
 }
 
 #circle1 {
@@ -466,6 +474,7 @@ input[type="submit"]:hover {
       max-width: 100%;
       margin-bottom: 15px;
   }
+  
 
   #portfolio {
       padding: 40px 15px;
@@ -512,30 +521,30 @@ input[type="submit"]:hover {
   }
 
   #footer > div:nth-child(1) {
-      background-color: #7033FF;
-      color: white;
+  
+      color: black;
   }
 
   #footer > div:nth-child(1) p {
-      color: #f0f0f0;
+      color: black;
   }
 
   #footer > div:nth-child(2) {
-      background-color: #A060FF;
-      color: white;
+      
+      color: black;
   }
 
   #footer > div:nth-child(2) p {
-      color: #f0f0f0;
+      color: black;
   }
 
   #footer > div:nth-child(3) {
-      background-color: #B080FF;
-      color: white;
+    
+      color: black;
   }
 
   #footer > div:nth-child(3) p {
-      color: #f0f0f0;
+      color: black;
   }
 
   #footer > div:nth-child(3) a {
